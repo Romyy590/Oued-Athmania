@@ -1,18 +1,13 @@
 // Mobile Navigation
-const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
+   
 });
 
 // Smooth Scrolling for all links
@@ -126,17 +121,7 @@ style.textContent = `
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
+  
     
     @media (min-width: 769px) {
         .nav-links {
